@@ -1,0 +1,81 @@
+.icon-amex {
+  display: inline-block;
+  background-position: 0px 0px;
+  width: 64px;
+  height: 42px;
+  background-image: url('assets/sprite-cards.png');
+  background-size: 64px 378px;
+}
+
+.icon-dankort {
+  display: inline-block;
+  background-position: 0px -42px;
+  width: 64px;
+  height: 42px;
+  background-image: url('assets/sprite-cards.png');
+  background-size: 64px 378px;
+}
+
+.icon-dinersclub {
+  display: inline-block;
+  background-position: 0px -84px;
+  width: 64px;
+  height: 42px;
+  background-image: url('assets/sprite-cards.png');
+  background-size: 64px 378px;
+}
+
+.icon-discover {
+  display: inline-block;
+  background-position: 0px -126px;
+  width: 64px;
+  height: 42px;
+  background-image: url('assets/sprite-cards.png');
+  background-size: 64px 378px;
+}
+
+.icon-jcb {
+  display: inline-block;
+  background-position: 0px -168px;
+  width: 64px;
+  height: 42px;
+  background-image: url('assets/sprite-cards.png');
+  background-size: 64px 378px;
+}
+
+.icon-maestro {
+  display: inline-block;
+  background-position: 0px -210px;
+  width: 64px;
+  height: 42px;
+  background-image: url('assets/sprite-cards.png');
+  background-size: 64px 378px;
+}
+
+.icon-mastercard {
+  display: inline-block;
+  background-position: 0px -252px;
+  width: 64px;
+  height: 42px;
+  background-image: url('assets/sprite-cards.png');
+  background-size: 64px 378px;
+}
+
+.icon-unionpay {
+  display: inline-block;
+  background-position: 0px -294px;
+  width: 64px;
+  height: 42px;
+  background-image: url('assets/sprite-cards.png');
+  background-size: 64px 378px;
+}
+
+.icon-visa {
+  display: inline-block;
+  background-position: 0px -336px;
+  width: 64px;
+  height: 42px;
+  background-image: url('assets/sprite-cards.png');
+  background-size: 64px 378px;
+}
+
