@@ -20,7 +20,10 @@
   "devDependencies": {
     "babel-core": "^6.7.7",
     "babel-loader": "^6.2.4",
+    "babel-plugin-add-module-exports": "^0.2.0",
+    "clean-webpack-plugin": "^0.1.9",
     "css-loader": "^0.23.1",
+    "exports-loader": "^0.6.3",
     "html-webpack-plugin": "^2.16.0",
     "node-bourbon": "^4.2.8",
     "node-sass": "^3.6.0",

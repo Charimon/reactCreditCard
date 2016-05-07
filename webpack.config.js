@@ -8,7 +8,7 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const sprite = require('sprite-webpack-plugin');
 const NpmInstallPlugin = require('npm-install-webpack-plugin');
 const WebpackDevServer = require('webpack-dev-server');
-const env = process.env.WEBPACK_ENV;
+
 
 const host = 'localhost';
 const port = '9000';
@@ -41,6 +41,7 @@ const config = {
         loader: 'babel',
         query: {
           presets: ['react', 'es2015'],
+          plugins: ["add-module-exports"]
         }
       },
       {test: /\.css$/, loader: "style-loader!css-loader" },

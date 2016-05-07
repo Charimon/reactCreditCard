@@ -69,7 +69,6 @@ Card.defaultProps = {
 
 export default Card
 
-
 export class CardNumberInput extends React.Component {
   componentDidMount() { Payment.formatCardNumber(this.refs.input) }
   render() {
