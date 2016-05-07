@@ -17,7 +17,7 @@ const config = {
   entry: path.join(__dirname, 'src/index.jsx'),
   output: {
     path: path.join(__dirname, '/dist/'),
-    filename: '[name].min.js',
+    filename: '[name].js',
     publicPath: path.join(__dirname, '/'),
     libraryTarget: 'umd',
     library: "CreditCard"
@@ -33,8 +33,7 @@ const config = {
       'cssPath': __dirname + '/src/',
       'scale': 2,
       'bundleMode': 'multiple'
-    }),
-    new UglifyJsPlugin({minimize: true})
+    })
   ],
   module: {
     loaders: [
