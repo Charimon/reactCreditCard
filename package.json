@@ -2,11 +2,10 @@
   "name": "react-credit-card",
   "version": "1.0.0",
   "description": "Dynamically sized Credit Card view with inputs",
-  "main": "dist/main.js",
+  "main": "dist/main.min.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dist": "webpack",
-    "start": "webpack"
+    "build": "./node_modules/.bin/webpack --config webpack.dist.config.js",
+    "dev": "./node_modules/.bin/webpack --config webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -21,20 +20,21 @@
   "devDependencies": {
     "babel-core": "^6.7.7",
     "babel-loader": "^6.2.4",
-    "html-webpack-plugin": "^2.16.0",
-    "style-loader": "^0.13.1",
-    "webpack": "^1.13.0"
-  },
-  "dependencies": {
-    "classnames": "^2.2.4",
     "css-loader": "^0.23.1",
     "html-webpack-plugin": "^2.16.0",
     "node-bourbon": "^4.2.8",
     "node-sass": "^3.6.0",
+    "npm-install-webpack-plugin": "^3.1.0",
+    "sass-loader": "^3.2.0",
+    "sprite-webpack-plugin": "git+https://github.com/Charimon/sprite-webpack-plugin.git",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.0",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "dependencies": {
+    "classnames": "^2.2.4",
     "payment": "^1.0.3",
     "react": "^15.0.2",
-    "react-dom": "^15.0.1",
-    "sass-loader": "^3.2.0",
-    "sprite-webpack-plugin": "git+https://github.com/Charimon/sprite-webpack-plugin.git"
+    "react-dom": "^15.0.1"
   }
 }

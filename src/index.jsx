@@ -5,7 +5,7 @@ import Payment from 'payment'
 
 import './index.sass'
 
-//import '../../../sass/sprite-cards.css'
+import './sprite-cards.css'
 
 
 const cardWidthToHeightRatio = 1.75

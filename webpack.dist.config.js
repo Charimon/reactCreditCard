@@ -7,32 +7,32 @@ const bourbon = require('node-bourbon');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const sprite = require('sprite-webpack-plugin');
 const NpmInstallPlugin = require('npm-install-webpack-plugin');
-const WebpackDevServer = require('webpack-dev-server');
-const env = process.env.WEBPACK_ENV;
+const UglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
 
 const host = 'localhost';
 const port = '9000';
 
+var plugins = [
+  new NpmInstallPlugin(),
+  new webpack.optimize.OccurenceOrderPlugin(),
+  new sprite({
+    'source' : __dirname + '/src/sprites/',
+    'imgPath': __dirname + '/src/assets/',
+    'cssPath': __dirname + '/src/',
+    'scale': 2,
+    'bundleMode': 'multiple'
+  }),
+  new UglifyJsPlugin({minimize: true})
+];
+
 const config = {
-  entry: {
-    "example": path.join(__dirname, 'example/index.jsx')
-  },
+  entry: path.join(__dirname, 'src/index.jsx'),
   output: {
-    path: path.join(__dirname, '/example/'),
-    filename: '[name].js',
+    path: path.join(__dirname, '/dist/'),
+    filename: '[name].min.js',
     publicPath: path.join(__dirname, '/')
   },
-  plugins: [
-      new NpmInstallPlugin(),
-      new webpack.optimize.OccurenceOrderPlugin(),
-      new sprite({
-        'source' : __dirname + '/src/sprites/',
-        'imgPath': __dirname + '/src/assets/',
-        'cssPath': __dirname + '/src/',
-        'scale': 2,
-        'bundleMode': 'multiple'
-      })
-    ],
+  plugins: plugins,
   module: {
     loaders: [
       {test: /\.woff$/, loader: 'url?limit=100000'},
@@ -52,18 +52,5 @@ const config = {
     extensions: ['', '.js', '.jsx']
   }
 }
-
-new WebpackDevServer(webpack(config), {
-  contentBase: './example',
-  hot: true,
-  debug: true
-}).listen(port, host, (err, result) => {
-  if (err) console.log(err);
-});
-
-console.log('-------------------------');
-console.log('Local web server runs at http://' + host + ':' + port);
-console.log('-------------------------');
-
 
 module.exports = config
